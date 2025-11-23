@@ -1,6 +1,4 @@
-
 🛡️ Endpoint Process Watchdog
-
 Real-Time Process Monitoring & Automatic Threat Response
 
 Endpoint Process Watchdog is a lightweight endpoint-security tool that continuously monitors running processes on a host and automatically takes action when suspicious or unauthorized processes appear.
@@ -47,7 +45,7 @@ Suspicious shells (bash, sh, python, powershell) in unusual locations
 
 Malware-like behavior (rapid spawning, child-process chains)
 
-Processes running from /tmp, /dev/shm, or weird directories
+Processes running from /tmp, /dev/shm, or odd directories
 
 High-risk processes not in the whitelist
 
@@ -63,7 +61,7 @@ Compares running processes against:
 
 Creates detailed logs for SOC triage
 
-Takes action if configured to do so (kill/alert/log)
+Takes action if configured (kill / alert / log)
 
 📦 Installation
 
@@ -101,7 +99,6 @@ Create or edit config.json:
   "email_alerts": false
 }
 
-
 Config Options
 Option	Description
 whitelist	Processes allowed to run
@@ -110,19 +107,15 @@ scan_interval	How often the monitor scans processes
 discord_webhook	Optional: Send alerts to Discord
 email_alerts	Optional: Enable email notifications
 🟣 Using the Watchdog
-Run the Monitor
-sudo python3 watchdog.py
 
+Run the monitor:
+
+sudo python3 watchdog.py
 
 
 Recommended to run as root for full process visibility.
 
 🔔 Alert Example
-
-When a blacklisted or unknown process appears:
-
-
-
 [ALERT] Suspicious process detected!
 Name: nmap
 PID: 1421
@@ -130,17 +123,13 @@ Path: /usr/bin/nmap
 Action: TERMINATED
 Timestamp: 2025-11-23 01:34:12
 
-
-
 📋 Notice
 
 Requires Python 3.7+
 
 Requires elevated permissions for full process visibility
 
-Does not replace an enterprise EDR — it is for training, detection logic, and SOC readiness
-
-
+Does NOT replace an enterprise EDR — it is for training, detection logic, and SOC readiness
 
 👤 Author
 
