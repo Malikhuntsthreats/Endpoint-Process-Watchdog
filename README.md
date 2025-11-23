@@ -1,3 +1,4 @@
+
 🛡️ Endpoint Process Watchdog
 
 Real-Time Process Monitoring & Automatic Threat Response
@@ -100,6 +101,7 @@ Create or edit config.json:
   "email_alerts": false
 }
 
+
 Config Options
 Option	Description
 whitelist	Processes allowed to run
@@ -112,11 +114,14 @@ Run the Monitor
 sudo python3 watchdog.py
 
 
+
 Recommended to run as root for full process visibility.
 
 🔔 Alert Example
 
 When a blacklisted or unknown process appears:
+
+
 
 [ALERT] Suspicious process detected!
 Name: nmap
@@ -125,13 +130,6 @@ Path: /usr/bin/nmap
 Action: TERMINATED
 Timestamp: 2025-11-23 01:34:12
 
-📸 Screenshots
-
-Add images to your /images folder and replace these:
-
-![](images/watchdog_running.png)
-![](images/alert_detected.png)
-![](images/terminated_process.png)
 
 
 📋 Notice
@@ -141,6 +139,8 @@ Requires Python 3.7+
 Requires elevated permissions for full process visibility
 
 Does not replace an enterprise EDR — it is for training, detection logic, and SOC readiness
+
+
 
 👤 Author
 
